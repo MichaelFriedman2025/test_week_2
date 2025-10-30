@@ -12,14 +12,16 @@ def calculate_hand_value(hand: list[dict]) -> int:
             sum_value += 10
 
     if checking_how_many_a_there_are == 1:
-        if 7 >= sum_value <= 10:
+        if 7 <= sum_value <= 10:
             sum_value += 11
+        else:
+            sum_value += 1
     elif checking_how_many_a_there_are == 2:
         sum_value = 12
 
     for i in hand[2:]:
         if i["rank"] == "A":
-            if 7 >= sum_value <= 10:
+            if 7 <= sum_value <= 10:
                 sum_value += 11
             else:
                 sum_value += 1
