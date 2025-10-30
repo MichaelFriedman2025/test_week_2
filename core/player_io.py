@@ -9,6 +9,8 @@ def ask_player_action() -> str:
 
         if answer == "H" or answer == "S":
             check = False
+        else:
+            print("Invalid input, please try again.")
 
     return answer
 
